@@ -7,4 +7,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #c3b3d8;
+  background: radial-gradient(circle at top left, #181023, #0b0519);
 }
