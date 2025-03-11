@@ -1,13 +1,13 @@
 main {
-  width: 90%;
-  max-width: 50rem;
-  margin: 2.5rem auto;
+  width: 80%;
+  margin: 3rem auto;
   display: grid;
   grid-auto-flow: row;
   gap: 2rem;
 }
 li {
   list-style: none;
+  margin-bottom: 1rem;
 }
 #users {
   list-style: none;
