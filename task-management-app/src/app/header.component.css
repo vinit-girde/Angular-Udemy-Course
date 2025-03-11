@@ -1,0 +1,11 @@
+header {
+  width: 80%;
+  margin: 0 auto;
+  background-color: aqua;
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+  width: 5rem;
+}
