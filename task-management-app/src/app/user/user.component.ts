@@ -14,7 +14,7 @@ export class UserComponent {
   @Input({ required: true }) name!: string;
   @Input({ required: true }) id!: string;
 
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
 
   // gettter property for computing dynamic user image profile image which can directly be used inside src attribute in property binding without parenthesis.
   get imagePath() {
