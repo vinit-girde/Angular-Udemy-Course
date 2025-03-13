@@ -14,8 +14,15 @@ import { DUMMY_USERS } from './dummy-users';
 export class AppComponent {
   title = 'task-management-app';
   users = DUMMY_USERS;
+  selectedUserId = 'u1';
+
+  // gettter property for computing dynamic user id  which can directly be used inside name in property binding without parenthesis.
+  get selectedUser() {
+    return this.users.find((user) => user.id === this.selectedUserId)!;
+  }
 
   onSelectUser(id: string) {
-    console.log('Selected User :', id);
+    // console.log('Selected User :', id);
+    this.selectedUserId = id;
   }
 }
