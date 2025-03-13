@@ -18,7 +18,7 @@ export class AppComponent {
 
   // gettter property for computing dynamic user id  which can directly be used inside name in property binding without parenthesis.
   get selectedUser() {
-    return this.users.find((user) => user.id === this.selectedUserId)!;
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
   onSelectUser(id: string) {
