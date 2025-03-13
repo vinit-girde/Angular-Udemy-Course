@@ -1,4 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+type UserType = {
+  id: string;
+  avatar: string;
+  name: string;
+};
 
 @Component({
   selector: 'app-user',
@@ -15,11 +20,7 @@ export class UserComponent {
   // @Input({ required: true }) id!: string;
 
   // Instead of passing three inputs we can wrap them inside user object and use that in @Input
-  @Input({ required: true }) user?: {
-    id: string;
-    avatar: string;
-    name: string;
-  };
+  @Input({ required: true }) user?: UserType;
 
   @Output() select = new EventEmitter<string>();
 
