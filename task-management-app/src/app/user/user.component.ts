@@ -24,6 +24,9 @@ export class UserComponent {
 
   @Output() select = new EventEmitter<string>();
 
+  // To check if user is selected and active
+  @Input({ required: true }) selected?: boolean;
+
   // gettter property for computing dynamic user image profile image which can directly be used inside src attribute in property binding without parenthesis.
   get imagePath() {
     return `assets/users/` + this.user?.avatar;
