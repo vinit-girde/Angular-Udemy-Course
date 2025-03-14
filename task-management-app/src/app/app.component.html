@@ -1,13 +1,19 @@
 <app-header />
 <main>
   <ul id="'users">
+    <!-- To loop the lists of data i.e user's -->
     @for(user of users; track user.id){
     <li>
       <app-user [user]="user" (select)="onSelectUser($event)" />
     </li>
     }
   </ul>
-  <app-tasks [name]="selectedUser?.name" />
+  <!-- To render conditional data usinf if else -->
+  @if(selectedUser){
+  <app-tasks [name]="selectedUser.name" />
+  } @else {
+  <h2 id="'fallback">Please select the user to see their assigned tasks</h2>
+  }
 </main>
 
 <router-outlet />

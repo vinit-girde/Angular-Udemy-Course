@@ -14,7 +14,7 @@ import { DUMMY_USERS } from './dummy-users';
 export class AppComponent {
   title = 'task-management-app';
   users = DUMMY_USERS;
-  selectedUserId = 'u1';
+  selectedUserId?: string;
 
   // gettter property for computing dynamic user id  which can directly be used inside name in property binding without parenthesis.
   get selectedUser() {
