@@ -3,7 +3,7 @@
   <ul id="'users">
     <!-- To loop the lists of data i.e user's -->
     @for(user of users; track user.id){
-    <li>
+    <li class="user-list">
       <app-user [user]="user" (select)="onSelectUser($event)" />
     </li>
     }
