@@ -10,7 +10,7 @@
   </ul>
   <!-- To render conditional data usinf if else -->
   @if(selectedUser){
-  <app-tasks [name]="selectedUser.name" />
+  <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
   <h2 id="'fallback">Please select the user to see their assigned tasks</h2>
   }
