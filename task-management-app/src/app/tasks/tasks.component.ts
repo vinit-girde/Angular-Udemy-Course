@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { TaskData } from './data.model';
 
 @Component({
   selector: 'app-tasks',
@@ -12,7 +13,7 @@ export class TasksComponent {
   // user name
   @Input() name?: string;
   // user ID
-  @Input({ required: true }) userId?: string;
+  @Input({ required: true }) userId!: string;
   // For showing new task component
   @Input() addingTask: boolean = false;
 
@@ -53,5 +54,16 @@ export class TasksComponent {
   // Function to listen on click listener of clicking on add task button
   onHandleNewTask() {
     this.addingTask = !this.addingTask;
+  }
+
+  newTaskHandler(taskData: TaskData) {
+    this.tasks.push({
+      title: taskData.title,
+      summary: taskData.summary,
+      dueDate: taskData.dueDate,
+      id: new Date().getTime().toString(),
+      userId: this.userId,
+    });
+    this.onHandleNewTask();
   }
 }

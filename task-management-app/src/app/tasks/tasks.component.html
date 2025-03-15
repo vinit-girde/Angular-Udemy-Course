@@ -2,6 +2,7 @@
 <app-new-task
   [isDialogBoxOpen]="addingTask"
   (closeDialog)="onHandleNewTask()"
+  (addTask)="newTaskHandler($event)"
 />
 }
 <section id="tasks">
