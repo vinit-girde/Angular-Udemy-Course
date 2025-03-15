@@ -1,8 +1,14 @@
+@if(addingTask){
+<app-new-task
+  [isDialogBoxOpen]="addingTask"
+  (closeDialog)="onHandleNewTask()"
+/>
+}
 <section id="tasks">
   <header>
     <h2>{{ name }}'s Tasks:</h2>
     <menu>
-      <button>Add Task</button>
+      <button (click)="onHandleNewTask()">Add Task</button>
     </menu>
   </header>
 
