@@ -7,9 +7,9 @@
   </header>
 
   <ul class="individual-tasks">
-    @for( task of selectedUserTasks; track task.id){
+    @for(task of selectedUserTasks; track task.id){
     <li>
-      <app-task [task]="task" />
+      <app-task [task]="task" (completedTask)="onCompletedTask($event)" />
     </li>
     }
   </ul>
