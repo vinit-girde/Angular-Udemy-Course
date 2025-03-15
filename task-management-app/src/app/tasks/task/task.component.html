@@ -1,7 +1,7 @@
 <article>
   <h2>{{ task?.title ? task?.title : "Task Title" }}</h2>
-  <time>{{ task?.dueDate ? task?.dueDate : "Due Date" }}</time>
-  <p>{{ task?.summary }}</p>
+  <time>{{ task?.dueDate | date : "fullDate" }}</time>
+  <p style="margin: 1rem 0">{{ task?.summary }}</p>
   <p class="actions">
     <button (click)="onCompletedTask()">Complete</button>
   </p>
